@@ -1,0 +1,8 @@
+name = "IDSpeak"
+uuid = "8c1d9be3-3b13-438f-a223-a544752cb642"
+authors = ["Markus Petters"]
+version = "0.1.0"
+
+[deps]
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
