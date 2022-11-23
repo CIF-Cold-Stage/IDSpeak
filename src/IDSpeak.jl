@@ -121,6 +121,12 @@ function __init__()
 
     def saveimage(image, fp):
         ids_peak_ipl.ImageWriter.Write(fp, image)
+
+    def set_gain(g):
+        m_node_map_remote_device.FindNode("Gain").SetValue(g)
+    
+    def set_exposure(t):
+        m_node_map_remote_device.FindNode("ExposureTime").SetValue(t)
     """
 end
 
@@ -130,6 +136,8 @@ prepare_acquisition() = py"prepare_acquisition"()
 alloc_and_announce_buffers() = py"alloc_and_announce_buffers"()
 start_acquisition(FPS) = py"start_acquisition"(FPS)
 acquire_image() = py"process_image"()
+set_gain(g) = py"set_gain"(g)
+set_exposure(t) = py"set_exposure"(t)
 stop_acquisition() = py"stop_acquisition"()
 close_camera() = py"peak.Library.Close"()
 
